@@ -30,6 +30,7 @@ group :developement, :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'capybara'
+  gem 'pry-rails'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

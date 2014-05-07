@@ -1,7 +1,0 @@
-<h1>Log in</h1>
-<%= form_for @session, :url => { :action => "create" }, :html => { :id => "login" } do |f| %>
-  <%= f.label_tag(:un, "Username:") %>
-  <%= f.text_field(:un) %>
-  <%= f.label_tag(:up, "Password:") %>
-  <%= f.password_field_tag(:up) %>
-<% end %>
