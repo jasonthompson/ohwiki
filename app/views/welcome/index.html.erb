@@ -1,3 +1,6 @@
-<% unless current_user %>
-<%= link_to 'Please sign in to OhWiki', log_in_path %>
+<% if current_user %>
+  <%= link_to 'Create page', new_pages_path %>
+<% else %>
+  <%= link_to 'Please sign in to OhWiki', log_in_path %>
 <% end %>
+

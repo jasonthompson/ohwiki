@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507094459) do
+ActiveRecord::Schema.define(version: 20140527154710) do
+
+  create_table "pages", force: true do |t|
+    t.text "title"
+    t.text "body"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"
