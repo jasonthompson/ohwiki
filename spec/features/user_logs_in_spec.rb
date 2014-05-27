@@ -12,6 +12,7 @@ feature 'Logging in' do
     end
     click_button 'Log in'
     expect(page).to have_content 'Logged in!'
+    expect(page).not_to have_content 'Please sign in to OhWiki'
   end
 
   scenario 'Non users tries to log in' do
