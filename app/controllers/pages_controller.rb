@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Page.find(params[:id])
+    @page = Page.open(params[:id])
   end
 
   def create
@@ -19,11 +19,11 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.find(params[:id])
+    @page = Page.open(params[:id])
   end
 
   def update
-    @page = Page.find(params[:id])
+    @page = Page.open(params[:id])
 
     if @page.update(page_params)
       redirect_to page_path @page
