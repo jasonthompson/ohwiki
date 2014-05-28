@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
-  get 'page/index'
 
-  get 'page/create'
+  get 'pages/index'
+  
+  get 'pages/create'
 
-  get 'page/new'
+  get 'pages/new'
+  
+  get 'pages/:id' => 'pages#show'
+  
+  get 'pages/:id/edit' => 'pages#edit'
 
-  get 'page/destroy'
+  get 'pages/:id/destroy' => 'pages#destroy'
 
-  get 'page/title'
-
-  get 'page/body'
 
   get 'log_out' => 'sessions#destroy', :as => 'log_out'
 
@@ -24,7 +26,7 @@ Rails.application.routes.draw do
   get 'login' => 'session#new'
 
   resource 'sessions', :path => 'log_in'
-  resource :pages, :users
+  resources :pages, :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with 'rake routes'.
 

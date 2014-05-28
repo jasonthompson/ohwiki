@@ -1,0 +1,46 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AddPasswordDigestToUser	/home/jason/dev/ohwiki/db/migrate/20140507094459_add_password_digest_to_user.rb	/^class AddPasswordDigestToUser < ActiveRecord::Migration$/;"	c
+Application	/home/jason/dev/ohwiki/config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Ohwiki
+ApplicationController	/home/jason/dev/ohwiki/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	/home/jason/dev/ohwiki/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CreatePages	/home/jason/dev/ohwiki/db/migrate/20140527154710_create_pages.rb	/^class CreatePages < ActiveRecord::Migration$/;"	c
+CreateUsers	/home/jason/dev/ohwiki/db/migrate/20140430102258_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+Ohwiki	/home/jason/dev/ohwiki/config/application.rb	/^module Ohwiki$/;"	m
+Page	/home/jason/dev/ohwiki/app/models/page.rb	/^class Page < ActiveRecord::Base$/;"	c
+PageHelper	/home/jason/dev/ohwiki/app/helpers/page_helper.rb	/^module PageHelper$/;"	m
+PagesController	/home/jason/dev/ohwiki/app/controllers/pages_controller.rb	/^class PagesController < ApplicationController$/;"	c
+SessionHelper	/home/jason/dev/ohwiki/app/helpers/session_helper.rb	/^module SessionHelper$/;"	m
+SessionsController	/home/jason/dev/ohwiki/app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+User	/home/jason/dev/ohwiki/app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UsersController	/home/jason/dev/ohwiki/app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersHelper	/home/jason/dev/ohwiki/app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+WelcomeController	/home/jason/dev/ohwiki/app/controllers/welcome_controller.rb	/^class WelcomeController < ApplicationController$/;"	c
+WelcomeHelper	/home/jason/dev/ohwiki/app/helpers/welcome_helper.rb	/^module WelcomeHelper$/;"	m
+authenticate	/home/jason/dev/ohwiki/app/models/user.rb	/^  def self.authenticate(params)$/;"	F	class:User
+authorize	/home/jason/dev/ohwiki/app/controllers/application_controller.rb	/^  def authorize$/;"	f	class:ApplicationController
+change	/home/jason/dev/ohwiki/db/migrate/20140430102258_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	/home/jason/dev/ohwiki/db/migrate/20140507094459_add_password_digest_to_user.rb	/^  def change$/;"	f	class:AddPasswordDigestToUser
+change	/home/jason/dev/ohwiki/db/migrate/20140527154710_create_pages.rb	/^  def change$/;"	f	class:CreatePages
+create	/home/jason/dev/ohwiki/app/controllers/pages_controller.rb	/^  def create$/;"	f	class:PagesController
+create	/home/jason/dev/ohwiki/app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	/home/jason/dev/ohwiki/app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+current_user	/home/jason/dev/ohwiki/app/controllers/application_controller.rb	/^  def current_user$/;"	f	class:ApplicationController
+destroy	/home/jason/dev/ohwiki/app/controllers/pages_controller.rb	/^  def destroy$/;"	f	class:PagesController
+destroy	/home/jason/dev/ohwiki/app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+edit	/home/jason/dev/ohwiki/app/controllers/pages_controller.rb	/^  def edit$/;"	f	class:PagesController
+index	/home/jason/dev/ohwiki/app/controllers/pages_controller.rb	/^  def index$/;"	f	class:PagesController
+index	/home/jason/dev/ohwiki/app/controllers/welcome_controller.rb	/^  def index$/;"	f	class:WelcomeController
+new	/home/jason/dev/ohwiki/app/controllers/pages_controller.rb	/^  def new$/;"	f	class:PagesController
+new	/home/jason/dev/ohwiki/app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
+new	/home/jason/dev/ohwiki/app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+page_params	/home/jason/dev/ohwiki/app/controllers/pages_controller.rb	/^  def page_params$/;"	f	class:PagesController
+show	/home/jason/dev/ohwiki/app/controllers/pages_controller.rb	/^  def show$/;"	f	class:PagesController
+to_param	/home/jason/dev/ohwiki/app/models/page.rb	/^  def to_param$/;"	f	class:Page
+update	/home/jason/dev/ohwiki/app/controllers/pages_controller.rb	/^  def update$/;"	f	class:PagesController
+user_params	/home/jason/dev/ohwiki/app/controllers/sessions_controller.rb	/^  def user_params$/;"	f	class:SessionsController
+user_params	/home/jason/dev/ohwiki/app/controllers/users_controller.rb	/^  def user_params$/;"	f	class:UsersController

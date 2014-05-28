@@ -1,9 +1,11 @@
 class PagesController < ApplicationController
+  before_filter :authorize
+
   def index
   end
 
   def show
-    @page = Page.new(page_params)
+    @page = Page.find(params[:id])
   end
 
   def create
@@ -17,21 +19,29 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.new(page_params)
+    @page = Page.find(params[:id])
+  end
+
+  def update
+    @page = Page.find(params[:id])
+
+    if @page.update(page_params)
+      redirect_to page_path @page
+    else
+      render 'edit'
+    end
   end
 
   def new
     @page = Page.new
   end
 
-  def update
-  end
   def destroy
   end
 
   private
 
   def page_params
-    params.require(:page).permit(:title, :body)
+    params.require(:page).permit(:title, :body, :id)
   end
 end

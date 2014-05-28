@@ -18,4 +18,9 @@ feature 'Creating a page' do
     click_on 'Create page'
     expect(page).to have_content 'My New Page!'
   end
+
+  scenario 'Unauthenticated user tries to create page' do
+    visit '/pages/new'
+    expect(page).to have_content 'Please log in'
+  end
 end
