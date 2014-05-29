@@ -3,7 +3,7 @@ require 'uri'
 
 feature 'title_url' do
   before :each do
-    @page = Page.new(:title => "What do you think about this café?",
+    @page = Page.new(:title => "What do you think about this cafe?",
                      :body => "Some writing")
     @page.save
     User.new(:email => "user@example.com",
