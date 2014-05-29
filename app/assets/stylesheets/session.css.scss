@@ -1,3 +1,43 @@
 // Place all the styles related to the Session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$bg_colour: #6495ed;
+$border_colour: #191970;
+$border: 2px solid $border_colour;
+
+body {
+  background:#aaa;
+}
+#log_in {
+  margin:10% auto;
+  border-radius:10px;
+  font-size:1em;
+  line-height:1.5em;
+  background:$bg_colour;
+  padding:1em;
+  width:25em;
+  border:$border;
+  box-shadow:5px 5px 5px #696969;
+  h1 {
+    margin:0 0 0 0.75em;
+  }
+  label {
+    display:none;
+  }
+
+  input {
+    padding:0.5em;
+    margin:1em auto;
+    border:$border;
+    border-radius:4px;
+  }
+}
+
+input#submit {
+  width:8em;
+  border-radius:2px;
+  margin:0 auto;
+  border:none;
+}
+

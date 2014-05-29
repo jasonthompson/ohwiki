@@ -1,8 +1,8 @@
-<h1>Log in</h1>
 <%= form_tag log_in_path, :id => "log_in" do %> 
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag 'Log in' %>
+  <h1>OhWiki</h1>
+    <%= label_tag :email %>
+    <%= text_field_tag :email, "", :placeholder => "Email address" %>
+    <%= label_tag :password %>
+    <%= text_field_tag :password,"", :placeholder => "Password", :type => "password" %>
+    <%= submit_tag 'Log in', :id => 'submit' %>
 <% end %>

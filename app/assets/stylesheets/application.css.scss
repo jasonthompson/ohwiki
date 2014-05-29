@@ -62,6 +62,13 @@ table {
   border-spacing: 0;
 }
 
+/////////////////
+/* Custom CSS */
+////////////////
+$bg_colour: #6495ed;
+$border_colour: #191970;
+$border: 2px solid $border_colour;
+
 body {
   font-family: "Trebuchet MS";
   h1 {
@@ -70,6 +77,7 @@ body {
     margin:1em 0 1em 1em;
   }
   form {
+
     width:90%;
     margin:1em 0 1em 1em;
 
