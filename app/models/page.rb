@@ -2,7 +2,7 @@ class Page < ActiveRecord::Base
 
   validates :title, :uniqueness => true, :presence => true
 
-  after_initialize :create_slug
+  before_save :create_slug
 
   def self.open(slug)
     Page.find_by_slug(slug)

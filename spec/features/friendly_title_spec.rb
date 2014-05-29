@@ -14,12 +14,11 @@ feature 'title_url' do
   scenario 'user opens page using title_url' do
     visit '/log_in'
     within('form#log_in') do
-      fill_in 'email', :with => 'user@example.ca'
+      fill_in 'email', :with => 'user@example.com'
       fill_in 'password', :with => 'secret'
       click_on 'Log in'
     end
-    title = 'What_do_you_thing_about_this_café?'
-    visit '/pages/' + URI.escape(title.split.join"_")
+    visit page_path @page
     expect(page).to have_content 'What do you think'
   end
 end

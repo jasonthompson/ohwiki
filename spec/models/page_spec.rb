@@ -6,12 +6,6 @@ describe Page do
 
   subject{Page.new(page_info)}
 
-  describe '#to_param' do
-    it "returns a friendly url" do
-      subject.to_param.should eq 'my_first_page'
-    end
-  end
-
   describe '#title' do
     it 'must be unique' do
       Page.new(page_info).save
