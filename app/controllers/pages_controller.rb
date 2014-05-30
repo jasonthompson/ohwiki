@@ -1,3 +1,5 @@
+require 'active_support/inflector'
+
 class PagesController < ApplicationController
   before_filter :authorize
 
@@ -7,7 +9,14 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.open(params[:id])
+    unless @page
+      @title = ActiveSupport::Inflector.titleize(params[:id])
+      render :non_existent
+    end
   end
+
+  # def non_existent
+  # end
 
   def create
     @page = Page.new(page_params)

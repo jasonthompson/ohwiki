@@ -6,3 +6,9 @@ def log_in_user
     click_on 'Log in'
   end
 end
+
+def create_user
+  User.new(:email => 'jason@example.ca',
+           :password => 'secret',
+           :password_confirmation => 'secret').save
+end

@@ -70,17 +70,23 @@ $border_colour: #191970;
 $border: 2px solid $border_colour;
 
 body {
+  line-height:1.5em;
+  font-size:1em;
   font-family: "Trebuchet MS";
+  p {
+    margin:1em;
+  }
+  cite, em {
+    font-style:italic;
+  }
   h1 {
     font-size: 1.25em;
     font-weight: bold;
     margin:1em 0 1em 1em;
   }
   form {
-
     width:90%;
     margin:1em 0 1em 1em;
-
     textarea {
       display: block;
       width:90%;
