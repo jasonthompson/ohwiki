@@ -1,3 +1,5 @@
+require 'redcarpet'
+
 class Page < ActiveRecord::Base
 
   validates :title, :uniqueness => true, :presence => true
@@ -11,9 +13,10 @@ class Page < ActiveRecord::Base
   def to_param
     slug
   end
+  
+  private
 
   def create_slug
     write_attribute(:slug, title.split.join("_").parameterize)
   end
-
 end
