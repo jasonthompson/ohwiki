@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'spec_helper_functions'
 
 feature 'Editing a page' do
   before :each do
@@ -8,12 +9,7 @@ feature 'Editing a page' do
   end
 
   scenario 'Authenticated user edits page' do
-    visit '/log_in'
-    within('form#log_in') do
-      fill_in 'email', :with => 'jason@example.ca'
-      fill_in 'password', :with => 'secret'
-      click_on 'Log in'
-    end
+    log_in_user
     visit page_path @page
     click_link 'Edit this page'
     click_on 'Save changes'
