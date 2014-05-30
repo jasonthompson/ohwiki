@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'errors_controller/show'
+
   get 'pages/index'
 
   root 'pages#index'
@@ -25,6 +27,11 @@ Rails.application.routes.draw do
 
   resource 'sessions', :path => 'log_in'
   resources 'pages', 'users'
+
+  %w(404 422 500).each do |status|
+    get status, :to => "errors#show", :status => status
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with 'rake routes'.
 

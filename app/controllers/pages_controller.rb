@@ -13,7 +13,7 @@ class PagesController < ApplicationController
     @page = Page.new(page_params)
 
     if @page.save
-      render :show 
+      render :show
     else
       render :edit
     end
@@ -34,6 +34,7 @@ class PagesController < ApplicationController
   end
 
   def new
+    @title = params[:title] || ""
     @page = Page.new
   end
 
