@@ -1,18 +1,15 @@
 require 'active_support/inflector'
+require_relative '../decorators/markdown_decorator'
 
 class PagesController < ApplicationController
   before_filter :authorize
 
   def index
-    @pages = Page.all
+    @pages = MarkdownDecorator.decorate(Page.all)
   end
 
   def show
-    @page = Page.open(params[:id])
-    unless @page
-      @title = ActiveSupport::Inflector.titleize(params[:id])
-      render :non_existent
-    end
+    @page = MarkdownDecorator.decorate(Page.open(params[:id]))
   end
 
   # def non_existent

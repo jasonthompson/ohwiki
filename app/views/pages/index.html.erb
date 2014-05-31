@@ -2,6 +2,6 @@
 <h1>Recent Pages</h1>
 <ul>
 <% @pages.each do |p| %>
-  <li><%= link_to p.title, p %></li> 
+  <li><%= link_to p.title, '/pages/' + p.to_param %></li> 
 <% end %>
 </ul>
