@@ -10,10 +10,11 @@ class PagesController < ApplicationController
 
   def show
     @page = MarkdownDecorator.decorate(Page.open(params[:id]))
+    unless @page.model?
+      @title = ActiveSupport::Inflector.titleize(params[:id])
+      render :non_existent
+    end
   end
-
-  # def non_existent
-  # end
 
   def create
     @page = Page.new(page_params)

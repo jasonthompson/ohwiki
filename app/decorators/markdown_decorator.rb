@@ -20,9 +20,13 @@ class MarkdownDecorator
       @@model_name.method(args.first)
     end
   end
- 
+
   def initialize(model)
     @model = model
+  end
+
+  def model?
+    @model
   end
 
   def title
