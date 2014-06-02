@@ -4,10 +4,10 @@
   <h1>Recent Pages</h1>
   <ul>
     <% @pages.each do |p| %>
-      <li><%= link_to p.title, '/pages/' + p.to_param %>
-    <%= link_to 'Delete this page', page_path(p),
-      :method => :delete, :data => { confirm: 'Are you sure?' },
-      :id => p.to_param %></li>
+      <li class="page-listing">
+        <%= link_to p.title, '/pages/' + p.to_param %>
+        <%= render :partial => 'shared/action_menu', :locals => {:p => p } %>
+      </li>
     <% end %>
   </ul>
 </section><!-- recent pages -->
