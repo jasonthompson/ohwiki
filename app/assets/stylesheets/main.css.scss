@@ -71,7 +71,10 @@ body {
   }
   menu {
     padding:0.5em 1em 0.5em 1em;
+    text-align:right;
     li {
+      margin-left:1em;
+      display:inline;
       list-style-type:none;
     }
   }

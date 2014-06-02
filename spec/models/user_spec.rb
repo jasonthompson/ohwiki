@@ -28,10 +28,24 @@ describe User do
     end
   end
 
-  describe "password_cofirmation" do
+  describe "password_confirmation" do
     it "must exist" do
       user = User.new(user_args.merge({:password_confirmation => ""}))
       expect(user).to be_invalid
-   end
+    end
+  end
+
+  describe "#authenticate" do
+    it "must authenticate user" do
+      user = User.new(user_args)
+      user.save
+      user.authenticate('secret').should eq user 
+    end
+
+    it "must not authenticate user with wrong password" do
+      user = User.new(user_args)
+      user.save
+      user.authenticate('wrong').should be_false
+    end
   end
 end

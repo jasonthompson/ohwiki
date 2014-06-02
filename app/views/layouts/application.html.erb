@@ -10,15 +10,16 @@
 <%= render 'shared/nav_menu' %>
 
 <% if !flash.empty? %>
-  <div id="flash"> 
-    <% flash.keys.each do |k| %> 
+  <div id="flash">
+    <% flash.keys.each do |k| %>
       <div class="<%= k %>">
         <%= flash[k] %>
-      </div>  
-    <% end %>   
+      </div>
+    <% end %>
   </div>
 <% end %>
-  <%= yield %>
+
+<%= yield %>
 
   </body>
   </html>

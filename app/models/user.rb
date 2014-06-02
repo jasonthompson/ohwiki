@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
 
   validates :email, :uniqueness => true, :presence => true
 
-  def self.authenticate(params)
-    self.find_by_email(params[:email])
-  end
+  # def self.authenticate(params)
+  #   self.find_by_email(params[:email])
+  # end
 end
 

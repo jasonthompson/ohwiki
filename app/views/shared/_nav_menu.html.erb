@@ -1,6 +1,7 @@
 <header>
   <h1>OhWiki</h1>
   <menu id="nav">
-    <li><%= link_to 'Recent Pages', pages_path %>
+    <li><%= link_to 'Recent Pages', pages_path %></li>
+    <li><%= link_to 'Profile', edit_user_path(current_user.id) %></li>
   </menu><!-- nav -->
 </header>
