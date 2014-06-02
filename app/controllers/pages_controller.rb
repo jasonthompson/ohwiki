@@ -20,6 +20,7 @@ class PagesController < ApplicationController
     @page = Page.new(page_params)
 
     if @page.save
+      flash[:notice] = "Page was successfully created."
       render :show
     else
       render :edit

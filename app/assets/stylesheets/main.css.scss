@@ -44,8 +44,29 @@ body {
     }
   }
   ul {
-    li {
+    li.page-listing {
       margin-left:1em;
+
+      menu.action {
+        visibility:hidden;
+        display:inline;
+        a {
+          padding:0.15em 0.25em 0.15em 0.25em;
+          font-size:0.75em;
+        }
+      }
+    }
+    li.page-listing:hover {
+      menu.action {
+        a {
+          padding:0.15em 0.25em 0.15em 0.25em;
+          font-size:0.75em;
+          color: $menu_bg_colour;
+          border:1px solid $menu_bg_colour;
+          text-decoration:none;
+          visibility:visible;
+        }
+      }
     }
   }
   menu {
@@ -54,13 +75,26 @@ body {
       list-style-type:none;
     }
   }
+  #flash {
+    font-size:.85em;
+    .notice {
+      padding-left:1em;
+      background:green;
+      color:white;
+    }
+    .alert {
+      padding-left:1em;
+      background:red;
+      color:white;
+    }
+  }
   header {
     h1 {
       float:left;
       margin:0.25em 3em 0 1em;
       color:$menu_font_colour;
     }
-  menu#nav {
+    menu#nav {
       background:$menu_bg_colour;
       color:$menu_font_colour;
 

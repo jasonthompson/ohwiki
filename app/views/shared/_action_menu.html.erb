@@ -1,0 +1,6 @@
+<menu class="action">
+  <%= link_to 'Edit', edit_page_path(p) %>
+  <%= link_to 'Delete', page_path(p),
+    :method => :delete, :data => { confirm: 'Are you sure?' },
+    :id => p.to_param %>
+</menu>
