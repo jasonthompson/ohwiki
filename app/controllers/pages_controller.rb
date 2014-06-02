@@ -46,6 +46,13 @@ class PagesController < ApplicationController
   end
 
   def destroy
+    @page = Page.open(params[:id])
+    if @page.destroy
+      flash[:notice] = %Q{ "#{@page.title}" was successfully deleted.}
+      redirect_to pages_path
+    else
+      flash[:notice] = "An error prevented this page from being deleted."
+    end
   end
 
   private
