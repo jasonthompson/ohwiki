@@ -1,0 +1,77 @@
+$bg_colour: #fff;
+$border_colour: #191970;
+$border: 2px solid $border_colour;
+$menu_bg_colour:#aaa;
+$menu_font_colour:#fff;
+
+body {
+  section {
+    padding:1em;
+  }
+  line-height:1.5em;
+  font-size:1em;
+  font-family: "Trebuchet MS";
+  background:$bg_colour;
+  p {
+    margin:1em;
+  }
+  cite, em {
+    font-style:italic;
+  }
+  h1 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin:1em 0 1em 1em;
+  }
+  form {
+    width:90%;
+    margin:1em 0 1em 1em;
+    textarea {
+      display: block;
+      width:90%;
+      height:30em;
+      margin:0.25em 0 1em 0;
+    }
+
+    input {
+      display:block;
+      width:90%;
+      margin:0.25em 0 1em 0;
+    }
+
+    input#submit {
+      width:200px;
+    }
+  }
+  ul {
+    li {
+      margin-left:1em;
+    }
+  }
+  menu {
+    padding:0.5em 1em 0.5em 1em;
+    li {
+      list-style-type:none;
+    }
+  }
+  header {
+    h1 {
+      float:left;
+      margin:0.25em 3em 0 1em;
+      color:$menu_font_colour;
+    }
+  menu#nav {
+      background:$menu_bg_colour;
+      color:$menu_font_colour;
+
+      a {
+        color:$menu_font_colour;
+        text-decoration: none;
+        font-weight:bold;
+      }
+      a:hover {
+        color:#eee;
+      }
+    }
+  }
+}

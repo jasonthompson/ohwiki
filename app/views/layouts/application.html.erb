@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'shared/nav_menu' %>
+
 <% if !flash.empty? %>
   <div id="flash"> 
     <% flash.keys.each do |k| %> 
