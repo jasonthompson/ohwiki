@@ -1,0 +1,24 @@
+<section id="user-form">
+  <%= form_for @user do |f| %>
+    <fieldset name="General information">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </fieldset><!-- General Information -->
+
+    <fieldset name="passord">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </fieldset>
+
+    <%= f.submit :id => "submit" %>
+  <% end %>
+</section>
