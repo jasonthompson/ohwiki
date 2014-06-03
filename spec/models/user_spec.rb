@@ -2,11 +2,15 @@ require 'spec_helper'
 
 describe User do
   let(:user_args){
-                   {:name => "Joe",
+                   {:first_name => "Joe",
+                    :last_name => "Smith",
                     :email => "joe@example.com",
                     :password => "secret",
                     :password_confirmation => "secret"}
                  }
+
+  subject{User.new(user_args)}
+
   describe "email" do
     it "must exist" do
       user = User.new(user_args.merge({:email => ""}))
@@ -14,7 +18,7 @@ describe User do
     end
 
     it "must be unique" do
-      user1 = User.new(user_args).save
+      subject.save
       user2 = User.new(user_args.merge({:password => "d",
                                         :password_confirmation => "d"}))
       expect(user2).to be_invalid
@@ -37,9 +41,8 @@ describe User do
 
   describe "#authenticate" do
     it "must authenticate user" do
-      user = User.new(user_args)
-      user.save
-      user.authenticate('secret').should eq user 
+      subject.save
+      subject.authenticate('secret').should eq subject
     end
 
     it "must not authenticate user with wrong password" do
@@ -47,5 +50,10 @@ describe User do
       user.save
       user.authenticate('wrong').should be_false
     end
+  end
+
+  describe "remember token" do
+    before { subject.save }
+    it {should respond_to(:remember_token)}
   end
 end

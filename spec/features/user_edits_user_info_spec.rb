@@ -8,7 +8,7 @@ feature 'Editable user info' do
 
   scenario 'Logged in user can edit his/her user info' do
     user = log_in_user
-    click_link('Edit profile')
+    click_link('Profile')
     expect(page).to have_css('#user_form')
   end
 end

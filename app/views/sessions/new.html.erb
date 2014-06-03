@@ -1,8 +1,13 @@
-<%= form_tag log_in_path, :id => "log_in" do %> 
+<%= form_tag log_in_path, :id => "log_in" do %>
   <h1>OhWiki</h1>
-    <%= label_tag :email %>
-    <%= text_field_tag :email, "", :placeholder => "Email address" %>
-    <%= label_tag :password %>
-    <%= text_field_tag :password,"", :placeholder => "Password", :type => "password" %>
-    <%= submit_tag 'Log in', :id => 'submit' %>
+
+  <%= label_tag :email %>
+  <%= text_field_tag :email, "", :placeholder => "Email address" %>
+
+  <%= label_tag :password %>
+  <%= text_field_tag :password,"", :placeholder => "Password", :type => "password" %>
+
+  <label id="remember_me"> Remember me: <%= check_box_tag :remember_me, 'no' %></label>
+
+  <%= submit_tag 'Log in', :id => 'submit' %>
 <% end %>

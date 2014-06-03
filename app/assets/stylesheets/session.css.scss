@@ -32,6 +32,23 @@ body {
     border:$border;
     border-radius:4px;
   }
+
+
+  label#remember_me {
+    display:block;
+    width:9em;
+    margin:0.25em 0 0.5em 1em;
+    font-size:0.85em;
+  }
+
+  input[type="checkbox"] {
+    width:1em;
+    height:1em;
+    padding:0;
+    margin:0.50em 0 0 0;
+    float:right;
+  }
+
 }
 
 input#submit {
