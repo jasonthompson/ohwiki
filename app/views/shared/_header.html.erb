@@ -1,5 +1,5 @@
 <header>
-  <h1>OhWiki</h1>
+  <h1><%= link_to 'OhWiki', pages_path %></h1>
   <% if current_user %>
     <menu id="nav">
       <li><%= link_to 'Recent Pages', pages_path %></li>

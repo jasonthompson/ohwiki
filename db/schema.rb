@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20140603192123) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "remember_token"
+    t.boolean  "admin"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
-
 end
