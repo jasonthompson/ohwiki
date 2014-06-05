@@ -3,11 +3,23 @@ $border_colour: #191970;
 $border: 2px solid $border_colour;
 $menu_bg_colour:#aaa;
 $menu_font_colour:#fff;
+$menu_a_hover_colour:#ddd;
 
 body {
   section {
     padding:1em;
   }
+
+  header {
+    a {
+      color:$menu_font_colour;
+      text-decoration:none;
+    }
+    a:hover {
+      color:$menu_a_hover_colour;
+    }
+  }
+
   line-height:1.5em;
   font-size:1em;
   font-family: "Trebuchet MS";
@@ -107,7 +119,7 @@ body {
         font-weight:bold;
       }
       a:hover {
-        color:#eee;
+        color:$menu_a_hover_colour;
       }
     }
   }
