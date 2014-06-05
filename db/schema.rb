@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603192123) do
+ActiveRecord::Schema.define(version: 20140605105022) do
 
   create_table "pages", force: true do |t|
     t.text     "title"
@@ -35,4 +35,5 @@ ActiveRecord::Schema.define(version: 20140603192123) do
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+
 end
