@@ -10,7 +10,10 @@ end
 def create_user
   user = User.new(:email => 'jason@example.ca',
            :password => 'secret',
-           :password_confirmation => 'secret')
+           :password_confirmation => 'secret',
+           :first_name => 'Jason',
+           :last_name => 'Thompson')
+
   user.save
   user
 end

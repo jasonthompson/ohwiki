@@ -1,10 +1,12 @@
-<header>
+<header id="main_header">
   <h1><%= link_to 'OhWiki', pages_path %></h1>
   <% if current_user %>
-    <menu id="nav">
-      <li><%= link_to 'Recent Pages', pages_path %></li>
-      <li><%= link_to 'Profile', edit_user_path(current_user.id) %></li>
-      <li><%= link_to 'Log out', log_out_path %></li>
+    <menu id="user_menu">
+      <li><%= link_to(edit_user_path(current_user)) do %>
+      <%= current_user.first_name %> <%= current_user.last_name %>
+       <% end %>
+    </li>
+      <li><%= link_to 'Log out', log_out_path(current_user.id) %></li>
     </menu><!-- nav -->
   <% end %>
 </header>

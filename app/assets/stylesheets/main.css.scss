@@ -1,3 +1,4 @@
+$body_text_colour: #000;
 $bg_colour: #fff;
 $border_colour: #191970;
 $border: 2px solid $border_colour;
@@ -8,6 +9,14 @@ $menu_a_hover_colour:#ddd;
 body {
   section {
     padding:1em;
+  }
+
+  article {
+    margin:0 0 0 1em;
+
+    header h1 {
+      color:$body_text_colour;
+    }
   }
 
   header {
@@ -103,20 +112,21 @@ body {
       color:white;
     }
   }
-  header {
+  header#main_header {
     h1 {
       float:left;
       margin:0.25em 3em 0 1em;
       color:$menu_font_colour;
     }
-    menu#nav {
-      background:$menu_bg_colour;
+    menu#user_menu {
+      background:$body_text_colour;
       color:$menu_font_colour;
 
       a {
         color:$menu_font_colour;
         text-decoration: none;
         font-weight:bold;
+        font-size:.85em;
       }
       a:hover {
         color:$menu_a_hover_colour;
