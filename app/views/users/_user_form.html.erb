@@ -10,7 +10,9 @@
       <%= f.label :email %>
       <%= f.email_field :email %>
 
-      <label>Admin: <%= f.check_box :admin %></label>
+      <% if @user.admin? %>
+        <label>Admin: <%= f.check_box :admin %></label>
+      <% end %>
 
     </fieldset><!-- General Information -->
 
