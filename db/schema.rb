@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605105022) do
+ActiveRecord::Schema.define(version: 20140611102659) do
 
   create_table "pages", force: true do |t|
     t.text     "title"
     t.text     "body"
     t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "settings", force: true do |t|
+    t.string   "name"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,8 +37,8 @@ ActiveRecord::Schema.define(version: 20140605105022) do
     t.string   "password_digest"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "remember_token"
     t.boolean  "admin"
+    t.string   "remember_token"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"

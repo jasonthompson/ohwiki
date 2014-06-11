@@ -6,9 +6,15 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  resources 'admin', :shallow => true do
-    resources 'users'
+  namespace 'admin' do
+    resources 'settings'
   end
+
+  resources 'admin' do
+    resources 'users', :shallow => true
+  end
+
+
   # get 'pages/create'
 
   # get 'pages/new'

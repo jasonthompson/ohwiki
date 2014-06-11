@@ -7,7 +7,7 @@ feature 'Admin user' do
     @admin_user = create_admin_user
   end
 
-  feature 'Admin user can create other admin users' do
+  feature 'Admin checkbox' do
     scenario 'Admin user can see admin checkbox' do
       log_in_admin_user
       visit edit_user_path(@admin_user.id)
@@ -18,6 +18,14 @@ feature 'Admin user' do
       log_in_user
       visit edit_user_path(@user.id)
       expect(page).not_to have_css('input[name="user[admin]"]')
+    end
+  end
+
+  feature 'Admin window' do
+    scenario 'Admin user can open admin window' do
+      log_in_admin_user
+      visit admin_settings_path
+      expect(page).to have_css('#admin_form')
     end
   end
 end
