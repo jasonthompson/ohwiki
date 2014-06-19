@@ -7,23 +7,12 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   namespace 'admin' do
-    resources 'settings'
+    resource 'settings'
   end
 
   resources 'admin' do
     resources 'users', :shallow => true
   end
-
-
-  # get 'pages/create'
-
-  # get 'pages/new'
-
-  # get 'pages/:id' => 'pages#show'
-
-  # get 'pages/:id/edit' => 'pages#edit'
-
-  # get 'pages/:id/destroy' => 'pages#destroy'
 
 
   get 'log_out' => 'sessions#destroy', :as => 'log_out'

@@ -1,11 +1,10 @@
 class AdminController < ApplicationController
-  before_filter :authorize_admin
-
   private
 
   def authorize_admin
-    if current_user.admin?
-      authorize
+    authorize
+    unless current_user && current_user.admin?
+      render :status => 403
     end
   end
 end

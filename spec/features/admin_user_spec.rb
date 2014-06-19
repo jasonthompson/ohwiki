@@ -25,7 +25,7 @@ feature 'Admin user' do
     scenario 'Admin user can open admin window' do
       log_in_admin_user
       visit admin_settings_path
-      expect(page).to have_css('#admin_form')
+      expect(page).to have_css('#settings')
     end
   end
 end
