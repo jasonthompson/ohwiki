@@ -1,4 +1,17 @@
-<h1>Admin Dashboard</h1>
+<h1>Settings</h1>
 
 <%= form_for @settings, :id => 'admin_form'  do |f| %>
+  <% if @page.errors.any? %>
+    <div class="error_messages">
+      <h2>Page is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label "Wiki name" %>
+  <%= f.text_field :name %>
 <% end %>

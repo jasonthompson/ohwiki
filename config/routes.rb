@@ -6,8 +6,10 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get 'admin/settings' => 'admin/settings#show'
+
   namespace 'admin' do
-    resource 'settings'
+    resource 'settings', :only => [:edit, :update, :show, :destroy]
   end
 
   resources 'admin' do
