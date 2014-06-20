@@ -11,6 +11,12 @@ feature 'Settings page' do
   scenario 'regular user cannot open page' do
     log_in_user
     visit 'admin/settings'
-    expect(page).to have_css('#403')
+    expect(page).to have_css('#recent-pages')
+  end
+
+  scenario 'admin user can open page' do
+    log_in_admin_user
+    visit 'admin/settings'
+    expect(page).to have_css('#settings')
   end
 end
